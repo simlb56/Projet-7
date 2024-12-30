@@ -1,0 +1,20 @@
+.about_container{
+//padding-inline: 3rem;
+padding: 0em 9em;
+@media screen and (width <= 1200px){
+    padding:1em 1em;
+   }
+}
+.image_container{
+    padding: 0em 1em;
+    @media screen and (width <= 1200px){
+        padding:1em 1em;
+       }
+}
+.about-description .description_header{
+    padding: 0.3em 1em;
+    font-size: 25px;
+}
+ .about-description .description_content {
+    margin: 0rem;
+ }

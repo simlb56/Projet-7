@@ -1,0 +1,205 @@
+.apartment-page {
+    position: relative;
+    div:first-child{
+        margin-bottom: 1rem;
+    }
+    h1{
+    color:#ff6060;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;}
+    h3{
+        color:#ff6060;
+        font-size: 18px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-weight: 500;
+        gap:0.4rem;
+    }
+    h2{
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 2em;
+    margin-top: 0;
+    }
+    & .apartment_tags{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px, 125px));
+        text-align: center;
+        gap: 0.5rem;
+        span{
+        background-color:#ff6060;
+        color:white;
+        font-size: 16px;
+        padding: 0.4em 0.5em;
+        border-radius: 0.7rem;
+    }}
+}
+.apartment-description-page .description_content{
+min-height: 180px;
+@media screen and (width <= 1320px){
+    min-height: 320px;
+}
+@media screen and (width <= 900px){
+    min-height: 180px;
+}
+}
+
+.apartment_description{
+    overflow: hidden;
+    margin-top: 1rem;
+    flex-basis: 50%;
+    flex:1;
+    min-width: 250px;
+    .description_header{
+        color:white;
+        background-color: #ff6060;
+        align-items: center;
+        padding: 0.2em 1em;
+        border-radius: 0.7rem;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        .arrow{
+            cursor: pointer;
+        }
+    }
+    
+    .description_content{
+        background-color: #f6f6f6;
+        color: black;
+        padding: 1.5em;
+        position: relative;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+        top: -1.5rem;
+        z-index: -1;
+        animation-duration: 0.5s;
+    }
+}
+.apartment_description_area{
+    display: flex;
+    gap: 12rem;
+    justify-content: space-between;
+    @media screen and (width <= 900px){
+        flex-direction: column;
+        gap: 0rem;
+    }
+}
+.slide-in {
+    animation-name: slide-in;
+}
+
+.slide-out {
+    animation-name: slide-out;
+}
+ @keyframes slide-in{
+     0%{
+         transform: translateY(-100%);
+     }
+     100% {
+        transform: translateY(0);
+    }
+}
+ @keyframes slide-out{
+     0%{
+        transform: translateY(0);
+     }
+     100% {
+        transform: translateY(-100%);
+    }
+ }
+ .arrow{
+    transition: transform 0.5s ease-in-out;
+ }
+ .rotate {
+    transform: rotate(-180deg);
+  }
+
+    .apartment_header{
+        display: flex;
+        gap:1rem;
+        @media screen and (width <= 880px){
+            flex-direction: column;
+        }
+    
+    }
+.apartment_title{
+    flex-grow: 1;
+}
+.apartment_owner{
+    display: flex;
+    flex-direction: column;
+    @media screen and (width <= 880px){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+}
+.apartment_owner_details{
+    display: flex;
+    gap:1rem;
+    margin-left: 50px;
+    @media screen and (width <= 880px){
+        order:1;
+    }
+    
+}
+.apartment_owner_badge{
+    height:64px;
+    width: 64px;
+    margin-top: -5px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+
+}
+.apartment_awner_stars{
+    font-size: 18px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+      gap:1rem;
+}
+.apartment-poge{
+    position: relative;
+    img{
+    width: 100%;
+    place-items: center;}
+}
+
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+  }
+  
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 110px;
+    box-sizing: border-box;
+  }
+  
+  .number-4 {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    @media screen and (width <= 840px){
+        visibility: hidden;
+      }
+  }
+  .apartment_description .description_content {
+    list-style-type: none;
+    font-size: 22px; 
+    font-weight: 200;
+    font-family: Montserrat;
+}
